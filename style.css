@@ -276,6 +276,7 @@ button {
         main img:hover {
             transform:scale(0.5) rotate(360deg);
         }
+        
 
         .container-photos {
             max-width:1224px;
@@ -400,5 +401,9 @@ button {
         button {
             font-size: 1.2rem;
             padding: 10px;
+        }
+
+        .lion {
+            max-height:33vh;
         }
     }
