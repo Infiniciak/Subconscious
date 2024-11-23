@@ -1,0 +1,404 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+}
+     
+.protest-revolution-regular {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.left-side h1,
+.left-side h2,
+.left-side p,
+.left-side ol,
+.left-side ul,
+button {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 0.8s forwards; 
+}
+
+.left-side ol,
+.left-side ul
+ {
+    animation-delay: 1.5s; 
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards; 
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+.delay-7 { animation-delay: 1.4s; }
+.delay-8 { animation-delay: 1.6s; }
+.delay-9 { animation-delay: 1.8s; }
+.delay-10 { animation-delay: 2.0s; }
+.delay-11 { animation-delay: 2.2s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+        nav {
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            background-color: #249e75;
+            padding:0rem calc((100vw - 1300px) /2);
+            height:80px;
+        }
+
+     
+
+        .contact-details p, .social-media p {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-media a {
+            font-size: 2rem;
+            color: #249e75;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #166e58;
+        }
+
+
+        nav ul {
+            text-decoration:none;
+        }
+
+        nav a {
+            transition:all 0.2s ease-in-out;
+
+        }
+
+        #hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 0 1rem;
+            font-size: 2rem; 
+            color: black;
+        }
+
+        .lion {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; 
+        }
+
+        nav a:hover {
+            transform:scale(0.5);
+        }
+
+        #logo {
+            color:black;
+           font-size:3rem;
+            padding:0 2rem;
+        }
+
+        nav a {
+            text-decoration:none;
+            color:black;
+            padding:0 1.5rem;
+        }
+
+       nav a:hover {
+            color:white;
+        }
+
+        .photo {
+            opacity: 0; 
+            transform: translateY(20px); 
+            animation: fadeInUp 0.8s forwards; 
+        }
+        
+        .photo:nth-child(1) { animation-delay: 0.5s; }
+        .photo:nth-child(2) { animation-delay: 0.7s; }
+        .photo:nth-child(3) { animation-delay: 0.9s; }
+        .photo:nth-child(4) { animation-delay: 1.1s; }
+        .photo:nth-child(5) { animation-delay: 1.3s; }
+        .photo:nth-child(6) { animation-delay: 1.5s; }
+        .photo:nth-child(7) { animation-delay: 1.7s; }
+
+        .subconscious {
+            background: linear-gradient(to right, #FFD700, #FFEA00);
+            height:100%;
+        }
+
+        #subconscious {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        #subconscious label {
+            font-weight: bold;
+        }
+
+        #subconscious input, 
+#subconscious textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #249e75;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#subconscious input:focus, 
+#subconscious textarea:focus {
+    border-color: #166e58;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.social-media h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-media a {
+    font-size: 2rem;
+    color: #249e75;
+}
+
+.social-media a:hover {
+    color: #166e58;
+}
+
+        .subconscious-container {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            height: 95vh;
+            padding:3rem calc((100vw - 1300px) /2);
+        }
+ 
+        .left-side {
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:flex-start;
+            padding:0 2rem;
+        }
+
+        .left-side h1
+         {
+            margin-bottom:1rem;
+            font-size:3rem;
+            animation-delay: 0.5s; 
+        }
+
+       
+
+        .left-side p {
+            margin-bottom:1rem;
+            font-size:1.5rem;
+            line-height:1.5;
+            animation-delay: 1s; 
+        }
+
+        .right-side {
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            padding:0 2rem;
+        }
+
+        button {
+            border:none;
+            border-radius:50px;
+            background-color: black;
+            color:white;
+            cursor:none;
+            animation-delay: 1.5s; 
+            padding:1rem;
+        }
+
+        footer {
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            background-color: #2b9a6e;
+            padding:0rem calc((100vw - 1300px) /2);
+            height:60px;
+            flex-wrap: wrap; 
+    font-size: 1rem;
+    text-align: center; 
+        }
+
+        .right-side {
+            position: relative;
+            z-index: 1; 
+        }
+        
+        .left-side {
+            z-index: 2; 
+        }
+        main img {
+            transition:transform 0.4s ease-in-out;
+        }
+
+        main img:hover {
+            transform:scale(0.5) rotate(360deg);
+        }
+
+        .container-photos {
+            max-width:1224px;
+            width:90%;
+            margin:auto;
+            padding: 40px 0;
+        }
+
+        .container-photos img {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .container-photos img:hover {
+            transform:scale(0.5);
+        }
+
+        .photos {
+            display:flex;
+            gap:20px;
+        }
+
+        .column {
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+        }
+
+        .photo img {
+            width:100%;
+            height:100%;
+            border-radius:5px;
+            object-fit:cover;
+        }
+
+        footer em {
+            font-size:2rem;
+            text-decoration: underline;
+        }
+
+        #menu-toggle {
+            display: none; 
+        }
+
+        @media screen and (max-width:768px) {
+            .subconscious-container {
+                grid-template-columns:1fr;
+                padding: 2rem;
+        text-align: center; 
+            }
+
+            .left-side, .right-side {
+                padding: 1rem; 
+            }
+
+         
+
+            .left-side h1 {
+                font-size: 2rem; 
+            }
+        
+            .left-side p {
+                font-size: 1.2rem; 
+                line-height: 1.4; 
+            }
+        
+            button {
+                padding: 0.8rem;
+                font-size: 1rem; 
+            }
+
+            footer {
+                flex-direction: column; 
+            }
+
+            #nav-items {
+                display: none; 
+                flex-direction: column;
+                width: 100%; 
+                position: absolute;
+                top: 80px; 
+                left: 0;
+                background-color: #249e75; 
+                z-index: 1000; 
+            }
+
+            #nav-items a {
+                padding: 1rem; 
+                text-align: center;
+                width: 100%; 
+            }
+
+            
+            #hamburger {
+                display: block; 
+            }
+
+            #menu-toggle:checked + #hamburger + #nav-items {
+                display: flex; 
+            }
+
+            #menu-toggle {
+                display: none; 
+        }
+
+        #logo {
+            font-size: 2rem;
+        }
+
+        .photos {
+            flex-direction: column;
+        }
+
+        .subconscious-container h1 {
+            font-size: 2rem;
+        }
+    
+        #subconscious input,
+        #subconscious textarea {
+            font-size: 1.2rem;
+        }
+    
+        button {
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+    }
