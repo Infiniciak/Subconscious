@@ -169,6 +169,7 @@ button {
             display: flex; /* Możesz używać flexboxa, aby lepiej kontrolować layout */
             align-items: center; /* Dostosuj wyrównanie */
             justify-content: center; /* Dostosuj wyrównanie */
+            padding:20px;
             overflow: hidden; 
         }
 
@@ -221,8 +222,8 @@ button {
             height: 95vh;
             padding:3rem calc((100vw - 1300px) /2);
             overflow:hidden;
-            padding: 20px; /* Upewnij się, że padding nie jest zbyt duży */
-    margin: 0 auto; /* Ustaw margines na auto, aby wyśrodkować */
+            padding: 20px; 
+            margin: 0 auto; 
 }
             
         
@@ -431,15 +432,19 @@ button {
         }
     }
 
-    @media screen and (max-width: 600px) { /* Możesz dostosować breakpoint do swoich potrzeb */
+    @media screen and (max-width: 600px) { 
         .subconscious-container {
-            padding: 10px; /* Dostosuj padding dla mniejszych ekranów */
+            padding: 10px; 
+            height:auto;
         }
         .left-side h1 {
-            font-size: 1.5rem; /* Dostosuj rozmiar czcionki */
+            font-size: 1.5rem; 
         }
-        
-        /* Możesz dodać więcej stylów responsywnych w tym bloku */
+        nav {
+            padding: 10px; 
+            height:auto;
+        }
+   
     }
 
     
