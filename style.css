@@ -21,6 +21,9 @@ body, html {
     overflow-x: hidden; /* zapobiega przewijaniu w poziomie */
 }
 
+main {
+    min-height: calc(100vh - 60px); /* Ustaw wysokość na 100vh minus wysokość footer */
+}
 
 .left-side h1,
 .left-side h2,
@@ -79,6 +82,9 @@ button {
             background-color: #249e75;
             padding:0rem calc((100vw - 1300px) /2);
             height:80px;
+            position:sticky;
+            top:0;
+            z-index:1000;
         }
 
      
@@ -108,6 +114,9 @@ button {
 
         nav ul {
             text-decoration:none;
+            flex-grow: 1; /* Allow ul to grow and fill space */
+    display: flex; /* Use flexbox for the ul */
+    justify-content: center; /* Center items in the nav */
         }
 
         nav a {
@@ -296,6 +305,10 @@ button {
         main img:hover {
             transform:scale(0.5) rotate(360deg);
         }
+
+        #menu-toggle:checked + #hamburger + #nav-items {
+            display: flex; /* Pokaż menu, gdy checkbox jest zaznaczony */
+        }
         
 
         .container-photos {
@@ -347,6 +360,12 @@ button {
         text-align: center; 
             }
 
+            #nav-items {
+                position: absolute;
+                background: #249e75; 
+            }
+
+            
             .left-side, .right-side {
                 padding: 1rem; 
             }
@@ -376,10 +395,10 @@ button {
                 flex-direction: column;
                 width: 100%; 
                 position: absolute;
-                top: 80px; 
+                top: 150px; 
                 left: 0;
                 background-color: #249e75; 
-                z-index: 1000; 
+                z-index: 200; 
             }
 
             #nav-items a {
@@ -392,6 +411,8 @@ button {
             #hamburger {
                 display: block; 
             }
+
+            
 
             #menu-toggle:checked + #hamburger + #nav-items {
                 display: flex; 
@@ -430,6 +451,16 @@ button {
         .werewolf {
             max-height:10vh;
         }
+
+        #nav-items {
+            flex-direction: column;
+            display: none; /* Domyślnie ukryte */
+            top:60px;
+        }
+    
+        #menu-toggle:checked + #hamburger + #nav-items {
+            display: flex; /* Wyświetl menu, gdy checkbox jest zaznaczony */
+        }
     }
 
     @media screen and (max-width: 600px) { 
@@ -443,9 +474,39 @@ button {
         nav {
             padding: 10px; 
             height:auto;
+                overflow: hidden; /* Prevent overflow */
         }
-   
+        #menu-toggle {
+            height:auto;
+        }
+        footer {
+            flex-direction: column;
+            padding: 10px; /* Zmniejsz padding w przypadku małych ekranów */
+            height: auto; /* Umożliwiając footerowi dopasowanie do treści */
+        }
+       
+      
+         #hamburger {
+        display: block; /* Ensure visible on small screens */
     }
 
+    #nav-items {
+        flex-direction: column; /* Arrange items in a column */
+        display: none; /* Hide by default */
+        position: fixed; /* Position it fixed */
+        background-color: #249e75; /* Background color */
+        width: 100%; /* Full-width for mobile */
+        top: 80px; /* Below the nav */
+        left: 0; /* Align to the left */
+    }
+
+    #menu-toggle:checked + #hamburger + #nav-items {
+        display: flex; /* Show menu when checked */
+    }
+        
+    }
+
+
+    
     
     
