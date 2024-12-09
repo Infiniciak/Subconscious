@@ -455,7 +455,7 @@ button {
         #nav-items {
             flex-direction: column;
             display: none; /* Domyślnie ukryte */
-            top:60px;
+            top:80px;
         }
     
         #menu-toggle:checked + #hamburger + #nav-items {
@@ -496,7 +496,7 @@ button {
         position: fixed; /* Position it fixed */
         background-color: #249e75; /* Background color */
         width: 100%; /* Full-width for mobile */
-        top: 80px; /* Below the nav */
+        top: 76px; /* Below the nav */
         left: 0; /* Align to the left */
     }
 
@@ -508,5 +508,19 @@ button {
 
 
     
-    
-    
+    @media screen and (max-width: 470px) { 
+        #nav-items {
+            top: 113px; 
+
+        }
+        
+    }
+
+    @media screen and (max-width: 340px) { 
+        #nav-items {
+            top: 152px; 
+
+        }
+        
+    }
+
