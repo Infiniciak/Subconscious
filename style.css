@@ -1,3 +1,4 @@
+/* Dla całej strony */
 * {
     box-sizing:border-box;
     margin:0;
@@ -5,6 +6,9 @@
     font-family:'Times New Roman', Times, serif;
 }
      
+
+
+/* Dla specjalnej czcionki */
 .protest-revolution-regular {
   font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
@@ -12,18 +16,71 @@
 }
 
 
+/* Dla kontenera opinii*/
+.opinions-container {
+    padding: 20px;
+    background: #FFEA00;
+    text-align: center;
+}
+
+.opinion {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.opinion h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.opinion p {
+    font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.opinion {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Zaczynamy od niewidocznych */
+    animation: slideIn 0.5s forwards; /* Używamy animacji */
+    animation-delay: calc(0.1s * var(--i)); /* Opóźnienie dla każdej opinii */
+}
+
+.opinion:nth-child(1) { --i: 1; }
+.opinion:nth-child(2) { --i: 2; }
+.opinion:nth-child(3) { --i: 3; }
+.opinion:nth-child(4) { --i: 4; }
+
+/* Dla elementów body i html */
 body, html {
     height: 100%;
     overflow-x: hidden; 
 }
 
 
-
+/* Dla body */
 body {
     background: #FFEA00;
     min-height: 100vh; 
 }
 
+/* Dla nawigacji */
 nav {
     display:flex;
     justify-content: center;
@@ -57,11 +114,12 @@ nav a:hover {
 }
 
 
+/* Dla sekcji środkowej */
 main {
     min-height: calc(100vh - 60px); 
 }
 
-
+/* Dla kontenera głównego */
 .subconscious {
     background: linear-gradient(to right, #FFD700, #FFEA00);
     min-height: 100vh; 
@@ -72,7 +130,8 @@ main {
     overflow: hidden; 
 }
 
-#subconscious {
+/* Dla formularza w kontenerze głównym */
+#form {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
@@ -101,6 +160,7 @@ outline: none;
 box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Dla elementów lewej części strony */
 .left-side h1,
 .left-side h2,
 .left-side p,
@@ -118,6 +178,22 @@ button {
     animation-delay: 1.5s; 
 }
 
+.left-side h1
+         {
+     margin-bottom:1rem;
+     font-size:3rem;
+     animation-delay: 0.5s; 
+ }
+
+       
+.left-side p {
+     margin-bottom:1rem;
+    font-size:1.5rem;
+    line-height:1.5;
+    animation-delay: 1s; 
+}
+
+/* Dla rozwijanego menu */
 #hamburger {
     display: none;
     cursor: pointer;
@@ -126,6 +202,7 @@ button {
     color: black;
 }
 
+/* Dla obrazka lwa */
 .lion {
     max-width: 100%;
     height: auto;
@@ -133,13 +210,14 @@ button {
 }
 
 
-
+/* Dla logo strony */
 #logo {
     color:black;
    font-size:3rem;
     padding:0 2rem;
 }
 
+/* Dla animacji elementów kontaktu */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -173,6 +251,7 @@ button {
     }
 }
 
+/* Dla danych kontaktowyxh*/
         .contact-details p, .social-media p {
             margin-bottom: 1rem;
             text-align: center;
@@ -195,6 +274,21 @@ button {
             color: #166e58;
         }
 
+        .social-media h2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .social-media a {
+            font-size: 2rem;
+            color: #249e75;
+        }
+        
+        .social-media a:hover {
+            color: #166e58;
+        }
+        
+/*dla animacji zdjęć */
         .photo {
             opacity: 0; 
             transform: translateY(20px); 
@@ -209,20 +303,7 @@ button {
 .photo:nth-child(6) { animation-delay: 1.5s; }
 .photo:nth-child(7) { animation-delay: 1.7s; }
 
-.social-media h2 {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.social-media a {
-    font-size: 2rem;
-    color: #249e75;
-}
-
-.social-media a:hover {
-    color: #166e58;
-}
-
+/* dla kontenera strony */
 .subconscious-container {
     display:grid;
      grid-template-columns: 1fr 1fr;
@@ -233,30 +314,18 @@ button {
      margin: 0 auto; 
 }
                 
- 
+ /* dla lewej strony */
 .left-side {
      display:flex;
      flex-direction:column;
      justify-content: center;
      align-items:flex-start;
      padding:0 2rem;
+     z-index:2;
 }
 
-.left-side h1
-         {
-     margin-bottom:1rem;
-     font-size:3rem;
-     animation-delay: 0.5s; 
- }
 
-       
-.left-side p {
-     margin-bottom:1rem;
-    font-size:1.5rem;
-    line-height:1.5;
-    animation-delay: 1s; 
-}
-
+ /* dla prawej strony */
 .right-side {
     display:flex;
     justify-content: center;
@@ -270,6 +339,8 @@ button {
     transform: rotate(15deg);
 }
 
+
+ /* dla przycisku*/
 button {
     border:none;
     border-radius:50px;
@@ -280,6 +351,7 @@ button {
     padding:1rem;
 }
 
+ /* dla stopki */
 footer {
     display:flex;
     justify-content: space-between;
@@ -290,13 +362,17 @@ footer {
     flex-wrap: wrap; 
     font-size: 1rem;
     text-align: center; 
+    flex-direction: column;
+    padding: 10px; 
+    height: auto; 
 }
 
-
-.left-side {
-    z-index: 2; 
+footer em {
+    font-size:2rem;
+    text-decoration: underline;
 }
 
+ /* dla obrazów w sekcji głównej */
 main img {
      transition:transform 0.4s ease-in-out;
 }
@@ -305,11 +381,8 @@ main img:hover {
     transform:scale(0.5) rotate(360deg);
 }
 
-#menu-toggle:checked + #hamburger + #nav-items {
-    display: flex; 
-}
         
-
+ /* dla kontenera zdjęć */
 .container-photos {
      max-width:1224px;
      width:90%;
@@ -325,13 +398,31 @@ main img:hover {
     transform:scale(0.5);
 }
 
+/* dla klasy w galerii */
 .photos {
      display:flex;
      gap:20px;
 }
 
+/* dla pojedynczego zdjęcia w galerii */
 .photo {
     position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+.photo img {
+    width:100%;
+   height:100%;
+   border-radius:5px;
+   object-fit:cover;
+   transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo img:hover {
+   transform: scale(1.1); 
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .photo::before {
@@ -351,6 +442,7 @@ main img:hover {
 }
 
         
+/* animacja obrotu dla zdjęć z prawej strony */
 .flip-container {
     perspective: 1000px; 
 }
@@ -369,40 +461,24 @@ main img:hover {
      transform: rotateY(180deg);
 }
         
-.photo {
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-}
-        
+
+/* dla kolumny ze zdjęciami */
 .column {
     display:flex;
     flex-direction: column;
     gap:20px;
 }
 
-.photo img {
-     width:100%;
-    height:100%;
-    border-radius:5px;
-    object-fit:cover;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.photo img:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
-}
-
-footer em {
-    font-size:2rem;
-    text-decoration: underline;
-}
-
+/* dla menu */
 #menu-toggle {
     display: none; 
 }
 
+#menu-toggle:checked + #hamburger + #nav-items {
+    display: flex; 
+}
+
+/* responsywność do 1024 pikseli*/
 @media screen and (max-width:1024px) {
 
 .subconscious-container {
@@ -437,9 +513,7 @@ button {
         font-size: 1rem; 
 }
 
-footer {
-        flex-direction: column; 
-}
+
 
 #nav-items {
         display: none; 
@@ -515,7 +589,7 @@ button {
 
 
 
-
+/* responsywność do 600 pikseli*/
 @media screen and (max-width: 600px) { 
 .subconscious-container {
         padding: 10px; 
@@ -538,13 +612,7 @@ nav {
 }
 
         
-
-footer {
-        flex-direction: column;
-        padding: 10px; 
-        height: auto; 
-}
-       
+ 
       
 #hamburger {
         display: block;
@@ -556,7 +624,7 @@ footer {
         position: fixed; 
         background-color: #249e75; 
         width: 100%; 
-        top: 76px; 
+        top: 75px; 
         left: 0; 
 }
 
@@ -568,13 +636,25 @@ footer {
 
 
     
-@media screen and (max-width: 470px) { 
-#nav-items {
-            top: 113px; 
-}
-        
-    }
+    @media screen and (max-width: 490px) { 
+        #nav-items {
+                    top: 74px; 
+        }
+                
+            }
 
+            @media screen and (max-width: 486px) { 
+                #nav-items {
+                            top: 113px; 
+                }
+                        
+                    }
+
+
+    
+
+
+/* responsywność do 340 pikseli*/
 @media screen and (max-width: 340px) { 
 #nav-items {
         top: 152px; 
@@ -582,3 +662,6 @@ footer {
         
     }
 
+
+
+    
