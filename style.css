@@ -650,7 +650,11 @@ nav {
                         
                     }
 
-
+@media (min-width: 468px) and (max-width: 485px) {
+    #nav-items {
+        top: 76px; 
+}
+}
     
 
 
